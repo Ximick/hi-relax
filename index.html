@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HI·RELAX - Премиальное кадровое агентство | Подбор топ-специалистов</title>
+    <meta name="description" content="Кадровое агентство премиум-класса. Подбор специалистов в IT, инженерии, digital с гарантией результата. Закрываем сложные вакансии за 7 дней.">
+    <meta name="keywords" content="рекрутинг, подбор персонала, кадровое агентство, найм сотрудников, IT рекрутинг, executive search">
+    <meta name="author" content="HI·RELAX">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="HI·RELAX - Премиальное кадровое агентство">
+    <meta property="og:description" content="Подбор топ-специалистов с гарантией результата">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hi-relax.ru/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-white: #ffffff;
+            --primary-yellow: #FFD700;
+            --primary-black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --accent-gradient: linear-gradient(135deg, #FFD700 0%, #FFED4E 100%);
+            --glass-effect: rgba(255, 255, 255, 0.08);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-bold: 0 20px 60px rgba(255, 215, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header - Futuristic Glass Morphism */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--primary-black);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--primary-white);
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-bold);
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-white);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--glass-effect);
+        }
+
+        /* Hero Section - Animated */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge i {
+            color: var(--primary-yellow);
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .accent {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 8px;
+        }
+
+        /* Floating Elements */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            bottom: 20%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 10%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        /* Sections Common */
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gradient);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border-color: rgba(255, 215, 0, 0.3);
+            box-shadow: var(--shadow-bold);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .pricing-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 24px;
+            color: var(--primary-black);
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price span {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-yellow);
+            font-weight: bold;
+        }
+
+        .pricing-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Cases Section */
+        .cases-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 60px;
+        }
+
+        .case-tab {
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .case-tab.active {
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            border-color: transparent;
+        }
+
+        .case-tab:hover:not(.active) {
+            border-color: rgba(255, 215, 0, 0.3);
+            color: var(--primary-white);
+        }
+
+        .cases-content {
+            display: none;
+        }
+
+        .cases-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .case-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .case-card h4 {
+            font-size: 16px;
+            color: var(--primary-yellow);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .case-point {
+            margin-bottom: 20px;
+        }
+
+        .case-point h5 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .case-point h5::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary-yellow);
+            border-radius: 50%;
+        }
+
+        .case-point p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Process Section */
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 2px;
+            background: var(--accent-gradient);
+        }
+
+        .process-step {
+            display: flex;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-black);
+            margin-right: 40px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateX(10px);
+        }
+
+        .step-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 16px;
+        }
+
+        .step-details {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-detail i {
+            width: 24px;
+            color: var(--primary-yellow);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: var(--glass-effect);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: var(--primary-white);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-yellow);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--accent-gradient);
+            color: var(--primary-black);
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            padding: 80px 0 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary-white);
+        }
+
+        .footer-column p, .footer-column a {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 12px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 48px; }
+            .section-title h2 { font-size: 36px; }
+            .footer-content { grid-template-columns: 1fr 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .hero-stats { flex-direction: column; gap: 20px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+            .cases-grid { grid-template-columns: 1fr; }
+            .contact-content { grid-template-columns: 1fr; }
+            .process-timeline::before { left: 20px; }
+            .step-number { width: 40px; height: 40px; font-size: 18px; margin-right: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .hero h1 { font-size: 32px; }
+            .section { padding: 80px 0; }
+            .section-title h2 { font-size: 28px; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">HI·RELAX</div>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#pricing">Тарифы</a></li>
+                <li><a href="#cases">Кейсы</a></li>
+                <li><a href="#stats">Результаты</a></li>
+                <li><a href="#process">Процесс</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <a href="#contact" class="header-cta">Обсудить проект</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                Премиальное кадровое агентство
+            </div>
+            <h1>Подбор <span class="accent">топ-специалистов</span> с гарантией результата</h1>
+            <p>Закрываем сложные вакансии в IT, инженерии и digital. Более 1000 успешных кейсов и 98% удовлетворенности клиентов.</p>
+            <a href="#contact" class="header-cta">Начать сотрудничество</a>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">вакансий в месяц</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">успешных кейсов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">7 дней</div>
+                    <div class="stat-label">среднее время закрытия</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Премиальные тарифы</h2>
+                <p>Индивидуальный подход для каждого клиента с гарантией результата</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Lite</h3>
+                    <div class="price">15 000 <span>руб.</span></div>
+                    <ul class="pricing-features">
+                        <li>Подбор 1 специалиста</li>
+                        <li>Поиск в течение 7 дней</li>
+                        <li>Гарантия 1 месяц</li>
+                        <li>3 кандидата на выбор</li>
+                        <li>Базовый скрининг резюме</li>
+                    </ul>
+                    <a href="#contact" class="pricing-button">Выбрать тариф</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Популярный</div>
+                    <div class="pricing-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Базовый</h3>
+                    <div class="price">30 000 <span>руб.</span></div>
+                    <ul class="pricing-features">
+                        <li>Подбор до 3 специалистов</li>
+                        <li>Поиск в течение 5 дней</li>
+                        <li>Гарантия 3 месяца</li>
+                        <li>5+ кандидатов на выбор</li>
+                        <li>Глубокий скрининг и интервью</li>
+                        <li>Первый кандидат через 3 дня</li>
+                    </ul>
+                    <a href="#contact" class="pricing-button">Выбрать тариф</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Аутсорс</h3>
+                    <div class="price">60 000 <span>руб./мес</span></div>
+                    <ul class="pricing-features">
+                        <li>Неограниченное количество вакансий</li>
+                        <li>Выделенный рекрутер</li>
+                        <li>Приоритетный поиск</li>
+                        <li>Гарантия 6 месяцев</li>
+                        <li>Полный аутсорсинг HR-функций</li>
+                        <li>Аналитика и отчетность</li>
+                    </ul>
+                    <a href="#contact" class="pricing-button">Выбрать тариф</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="section" id="cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши кейсы</h2>
+                <p>Реальные примеры успешного закрытия сложных вакансий</p>
+            </div>
+            <div class="cases-tabs">
+                <button class="case-tab active" data-tab="engineering">Инженерия</button>
+                <button class="case-tab" data-tab="it">IT</button>
+                <button class="case-tab" data-tab="digital">Digital</button>
+                <button class="case-tab" data-tab="horeca">Horeca</button>
+                <button class="case-tab" data-tab="backoffice">Back-Office</button>
+            </div>
+            
+            <div id="engineering" class="cases-content active">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <h3>Siemens Energy</h3>
+                        <h4>Инженер-конструктор турбин</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Компания столкнулась с дефицитом инженеров-конструкторов турбин. Штатный рекрутинг вел поиск более 6 месяцев безрезультатно.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Мы провели глубокий анализ рынка и нашли кандидата с редкой экспертизой. В первые месяцы он оптимизировал конструкцию узла, сократив издержки на 12%.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Росатом</h3>
+                        <h4>Инженер по автоматизации</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался специалист с опытом работы на объектах повышенной опасности. Кандидатов с нужной квалификацией на рынке практически не было.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли специалиста через хантинг в смежной отрасли. Кандидат успешно прошел все проверки и приступил к работе через 3 недели.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Камаз</h3>
+                        <h4>Технолог машиностроения</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Завод столкнулся с нехваткой квалифицированных технологов. Требовался специалист с опытом внедрения lean-производства.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Подобрали кандидата с опытом работы в немецком автопроме. За 2 месяца он оптимизировал 3 производственные линии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="it" class="cases-content">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <h3>Яндекс</h3>
+                        <h4>Senior Python Developer</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался разработчик с опытом работы с высоконагруженными системами. Поиск велся 4 месяца, подходящие кандидаты получали офферы от конкурентов.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли пассивного кандидата через профессиональные сообщества. Убедили его рассмотреть предложение, несмотря на наличие текущей работы.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Сбербанк</h3>
+                        <h4>DevOps Engineer</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Нужен был специалист с редким стеком технологий (Kubernetes, Terraform, Ansible) и опытом в финансовой сфере.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Закрыли вакансию за 2 недели через нашу базу кандидатов. Специалист вышел на работу и успешно автоматизировал процессы деплоя.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Ozon</h3>
+                        <h4>Data Scientist</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался специалист по машинному обучению с опытом работы с рекомендательными системами в e-commerce.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли кандидата с PhD в области computer science. Он разработал новую модель рекомендаций, повысив конверсию на 7%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="digital" class="cases-content">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <h3>Wildberries</h3>
+                        <h4>Performance Marketing Lead</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Нужен был специалист, способный масштабировать performance-маркетинг с бюджетами от 50 млн руб./мес.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли кандидата из смежной индустрии. За 6 месяцев он выстроил новую систему управления рекламными кампаниями.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>MVideo</h3>
+                        <h4>Head of SMM</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался руководитель отдела SMM для ребрендинга и увеличения вовлеченности аудитории.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Подобрали специалиста с опытом работы в крупном ритейле. За 3 месяца вовлеченность выросла на 40%.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Ламода</h3>
+                        <h4>CRO Specialist</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Нужен был специалист по оптимизации конверсии с опытом A/B тестирования в e-commerce.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли кандидата из зарубежной компании. Он внедрил систему тестирования, что увеличило конверсию на 15%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="horeca" class="cases-content">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <h3>Ресторан "White Rabbit"</h3>
+                        <h4>Шеф-повар</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался шеф-повар мишленовского уровня для открытия нового ресторана премиум-класса.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли специалиста с опытом работы в Европе. Ресторан получил положительные рецензии в ведущих СМИ.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Отель "Four Seasons"</h3>
+                        <h4>Управляющий отелем</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался управляющий с опытом работы в международных сетях и знанием нескольких языков.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Подобрали кандидата с 10-летним опытом в Европе и Азии. Гостиница улучшила показатели удовлетворенности гостей на 25%.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Кофейня "DoubleB"</h3>
+                        <h4>Управляющий сетью</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Нужен был управляющий для масштабирования региональной сети кофеен.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли специалиста из федеральной сети. За год открыто 15 новых точек с превышением плановых показателей.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="backoffice" class="cases-content">
+                <div class="cases-grid">
+                    <div class="case-card">
+                        <h3>Газпром</h3>
+                        <h4>Финансовый директор</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался CFO с опытом работы в публичных компаниях и проведения IPO.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли кандидата с успешным опытом вывода компании на биржу. Провел реструктуризацию финансового департамента.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>X5 Retail Group</h3>
+                        <h4>HR Director</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Нужен был HR-директор для трансформации HR-функции в быстрорастущей компании.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Подобрали специалиста из технологической компании. Внедрил современные HR-процессы и системы.</p>
+                        </div>
+                    </div>
+                    <div class="case-card">
+                        <h3>Лукойл</h3>
+                        <h4>Юрист по M&A</h4>
+                        <div class="case-point">
+                            <h5>ТОЧКА А:</h5>
+                            <p>Требовался юрист с опытом сопровождения международных сделок M&A в нефтегазовой отрасли.</p>
+                        </div>
+                        <div class="case-point">
+                            <h5>ТОЧКА Б:</h5>
+                            <p>Нашли кандидата из международной юридической фирмы. Успешно сопровождал сделку по приобретению актива за $500 млн.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" id="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши результаты</h2>
+                <p>Цифры, которые говорят сами за себя</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-text">вакансий закрываем ежемесячно</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-text">резюме в нашей базе</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-text">лет опыта у наших рекрутеров</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">удовлетворенность клиентов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Процесс работы</h2>
+                <p>Четкая методология, проверенная сотнями успешных кейсов</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Глубокий анализ вакансии</h3>
+                        <p>Изучаем требования, корпоративную культуру и скрытые потребности</p>
+                        <div class="step-details">Проводим 2-3 встречи с заказчиком, составляем детальный профиль кандидата</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Многоканальный поиск</h3>
+                        <p>Используем 7+ источников: базу, хантинг, рефералы, соцсети, профессиональные сообщества</p>
+                        <div class="step-details">Анализируем 100+ профилей для каждой вакансии</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Глубинное интервью</h3>
+                        <p>Оцениваем hard и soft skills через кейс-интервью и профессиональные тесты</p>
+                        <div class="step-details">Проводим оценку по 12 компетенциям, проверяем рекомендации</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Представление кандидатов</h3>
+                        <p>Предоставляем детальные отчеты с видео-интервью и экспертными заключениями</p>
+                        <div class="step-details">3-5 лучших кандидатов с полной аналитикой по каждому</div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Сопровождение до выхода</h3>
+                        <p>Помогаем с согласованием оффера и поддерживаем на этапе онбординга</p>
+                        <div class="step-details">Гарантийный период от 1 до 6 месяцев в зависимости от тарифа</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Начнем работать вместе</h2>
+                <p>Обсудим вашу задачу и предложим решение в течение 24 часов</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Свяжитесь с нами</h3>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Москва, Пресненская наб., 12</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (495) 123-45-67</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@hi-relax.ru</span>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <span>Пн-Пт: 9:00 - 19:00</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Интересующая услуга</label>
+                            <select id="service" class="form-control">
+                                <option value="lite">Lite (15 000 руб.)</option>
+                                <option value="basic">Базовый (30 000 руб.)</option>
+                                <option value="outsource">Аутсорс (60 000 руб./мес)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Опишите вашу задачу</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Например: нужен Senior Python Developer с опытом в fintech..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Обсудить проект</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>HI·RELAX</h3>
+                    <p>Премиальное кадровое агентство. Специализируемся на подборе топ-специалистов в IT, инженерии и digital с гарантией результата.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <a href="#pricing">Lite</a>
+                    <a href="#pricing">Базовый</a>
+                    <a href="#pricing">Аутсорс</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Направления</h3>
+                    <a href="#cases">Инженерия</a>
+                    <a href="#cases">IT</a>
+                    <a href="#cases">Digital</a>
+                    <a href="#cases">Horeca</a>
+                    <a href="#cases">Back-Office</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p>Москва, Пресненская наб., 12</p>
+                    <p>+7 (495) 123-45-67</p>
+                    <p>hello@hi-relax.ru</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HI·RELAX. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Cases Tabs
+        const caseTabs = document.querySelectorAll('.case-tab');
+        const casesContents = document.querySelectorAll('.cases-content');
+        
+        caseTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                caseTabs.forEach(t => t.classList.remove('active'));
+                casesContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.85)';
+                header.style.backdropFilter = 'blur(20px)';
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Спасибо за вашу заявку! Наш менеджер свяжется с вами в течение 2 часов.');
+            contactForm.reset();
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.pricing-card, .case-card, .stat-item, .process-step, .contact-form').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
